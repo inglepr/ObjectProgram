@@ -1,0 +1,26 @@
+[ {
+  "name" : "Sarika",
+  "relianceShares" : 15,
+  "hdfcShares" : 45,
+  "iciciShares" : 51
+}, {
+  "name" : "SARIKA",
+  "relianceShares" : -3,
+  "hdfcShares" : 20,
+  "iciciShares" : -10
+}, {
+  "name" : "NILAM",
+  "relianceShares" : 0,
+  "hdfcShares" : 26,
+  "iciciShares" : 0
+}, {
+  "name" : "SUMAN",
+  "relianceShares" : 41,
+  "hdfcShares" : 0,
+  "iciciShares" : 0
+}, {
+  "name" : "SUVARNA",
+  "relianceShares" : 12,
+  "hdfcShares" : 0,
+  "iciciShares" : 0
+} ]
