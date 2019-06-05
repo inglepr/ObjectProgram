@@ -1,12 +1,6 @@
 package addressbook;
-
-
-
-
-
 import java.util.Comparator;
-
-//import com.bridgeit.addressbook.module.Person;
+import addressbook.Person;
 
 public class CompareAddressBook 
 {

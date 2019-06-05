@@ -199,7 +199,7 @@ public class DoctorPatientImplementation implements DoctorAndPatientData {
 	public void save() {
 		try {
 			
-			mapper.writeValue(new File("/home/user/Documents/program/avani/BridglabzJava/src/Doctor_/patients.json"), personlist);
+			mapper.writeValue(new File("/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/doctor/Pesent.json"), personlist);
 			mapper.writeValue(new File("/home/user/Documents/program/avani/BridglabzJava/src/Doctor_/Appointment.json"), appointmentlist);
 			mapper.writeValue(new File("/home/user/Documents/program/avani/BridglabzJava/src/Doctor_/Doctor.json"), doctorlist);
 		} catch (IOException e) {

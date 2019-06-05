@@ -1,24 +1,13 @@
 package addressbook;
-
-
-
-
 /**
 * 	@purpose     :  To hold address all the operation of address book  
 *  @author       :  Priya ingle
 *
 ***/
-
-
 import com.bridgelabz.util.Utilityobject;
-
-
 import addressbook.AddressBookManager;
-
-
 public class Menu 
 {
-	
 	public static void addressMenu(boolean value)
 	{
 	try {

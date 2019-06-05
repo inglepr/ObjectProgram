@@ -1,14 +1,5 @@
 package addressbook;
-
-
-
-
-import java.util.Scanner;
-
 import com.bridgelabz.util.Utilityobject;
-
-
-
 public class AddressBookManager 
 {
 	static AddressBook addressBook = new AddressBook();

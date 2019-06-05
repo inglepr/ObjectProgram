@@ -1,5 +1,4 @@
 package com.bridgelabz.objectprogram;
-//package com.bridgelabz.objectprogram;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -12,7 +11,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import com.bridgelabz.util.Utilityobject;
 
 
-public class Redex {
+public class Demo {
 
 	  public static void main(String[] args)
 	    {

@@ -24,6 +24,8 @@ public class FileSys implements IAddress {
 		File file = IAddress.getPathOfFile(fileName, fileExtension);
 		try {
 			
+		
+			//don't need to convert string into byte array because it provides method to write string directly.
 			FileWriter newFileWritten = new FileWriter(file);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -31,5 +33,5 @@ public class FileSys implements IAddress {
 		}
 
 		return file;
-	}
-}
+		}}
+	

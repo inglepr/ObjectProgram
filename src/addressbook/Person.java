@@ -7,11 +7,7 @@ public class Person {
 	private String state;
 	private String zip;
 	private String phone;
-
-
-	
-
-	public Person(String firstName, String lastName, String address, String city, String state, String zip,
+public Person(String firstName, String lastName, String address, String city, String state, String zip,
 		String phone) {
 		setFirstName(firstName);
 		setLastName(lastName);
