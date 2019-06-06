@@ -24,11 +24,11 @@ public class StockAccount implements StockInterface {
 
 	
 	
-	private Customer customer;
-	private CompanyShares companyShares;
+	public Customer customer;
+	public CompanyShares companyShares;
 
 	public static ObjectMapper objMapperRef=new ObjectMapper();
-	File customerFile = new File("/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/Commercialdata/Customar.json");
+	File customerFile = new File("/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/Commercialdata/Customer.json");
 	File companySharesFile = new File("/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/Commercialdata/CompanyShare.json");
 
 	public StockAccount() {

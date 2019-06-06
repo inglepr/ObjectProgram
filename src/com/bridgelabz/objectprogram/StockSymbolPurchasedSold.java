@@ -22,7 +22,7 @@ public class StockSymbolPurchasedSold {
 			ObjectMapper mapper = new ObjectMapper();
 			Stack<String> stack = new Stack<>(); // create object of stack class
 			// read data from file to linked list
-			LinkedList<CommercialPojo> data1 = mapper.readValue(new File("/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/Commercialdata/Customar.json"),
+			LinkedList<CommercialPojo> data1 = mapper.readValue(new File("/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/bridgelabz/objectprogram/Commarecial.json"),
 					new TypeReference<LinkedList<CommercialPojo>>() {
 					});
 			int i = 0;

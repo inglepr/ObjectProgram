@@ -1,83 +1,57 @@
 package com.bridgelabz.objectprogram;
 import java.io.File;
+
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.regex.Pattern;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.LinkedList;
 
-import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 
-import com.bridgelabz.util.Utilityobject;
 
 
+import com.bridgelabz.objectprogram.CommercialPojo;
 public class Demo {
 
-	  public static void main(String[] args)
-	    {
-			// giving file path 
-	    	String filePath="/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/bridgelabz/objectprogram/RegularExpretion";
-		    File expressionFile=new File(filePath);
-		    //Using objectMapper class to read the file or to write details into file  
-			ObjectMapper mapper=new ObjectMapper();
-			//Scanner class is used for taking user input 
-			try
-			{
-				//Read the details from file by using readTree method 
-				JsonNode filRead =mapper.readTree(expressionFile);
-				JsonNode expression=filRead.get("RegularExpression");
-				String regularExpression=expression.asText();
-				//Printing details on console 
-				System.out.println(regularExpression);
-				System.out.println("Enter your name ");
-				String name=Utilityobject.getString();
-				if(Pattern.matches("[a-zA-Z]+", name))
-				{
-					regularExpression=regularExpression.replaceAll("<<name>>", name);						
-				}
-				else
-				{
-					System.err.println("You entered wrong details at name ");
-				}
-				System.out.println("Enter your full name ");
-				String fullName=Utilityobject.getString();
-				//Using regular expressions 
-				if(Pattern.matches("[a-zA-Z]+", fullName))
-				{
-					regularExpression=regularExpression.replaceAll("<<full name>>", fullName);						
-				}
-				else
-				{
-					System.err.println("You entered wrong details at mobilenumber ");
-				}
-				System.out.println("Enter your mobile number ");
-			    String number=Utilityobject.getString();
-				if(Pattern.matches("[789][0-9]{9}+", number))
-				{
-					regularExpression=regularExpression.replaceAll("xxxxxxxxxx", number);						
-				}
-				else
-				{
-					System.err.println("You entered wrong details at mobilenumber ");
-				}
-				//using date class we get the today date 
-				Date todayDate=new Date();
-				// To get format we using simpleDateFormat method . 
-				SimpleDateFormat datefar=new SimpleDateFormat("dd/MM/yyyy");
-				String date=datefar.format(todayDate);
-				regularExpression=regularExpression.replaceAll("01/01/2016", date);									
-				System.out.println(regularExpression);
+	public static void main(String args[]) throws JsonMappingException, IOException {
+		String companyName = null;
+		String symbol = null;
+		// object of queue class
+		ObjectMapper mapper = new ObjectMapper();
+		Queue<String> queue = new Queue<>(); // create object of queue class
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); // set date and time format
+		LocalDateTime now = LocalDateTime.now(); // get current time
+		String date = (dtf.format(now));
+		// read file data into linked list
+		LinkedList<CommercialPojo> data1 = mapper.readValue(new File(
+				"/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/bridgelabz/objectprogram/Commarecial.json"),
+				new TypeReference<LinkedList<CommercialPojo>>() {
+				});
+		int i = 0;
+		int size = data1.size();
+		// check if file is empty
+		if (size == 0)
+			System.out.println("\nno data found");
+		// if file is not empty then print details
+		else {
+
+			for (i = 0; i < data1.size(); i++) {
+				StringBuffer buffer=new StringBuffer();
+				companyName = data1.get(i).getCompanyName().trim();
+				buffer.append(companyName+" ");
+				
+				symbol = data1.get(i).getSymbol().trim();
+				buffer.append(symbol+" ");
+				date = data1.get(i).getDate().trim();
+				buffer.append(date+" ");
+				queue.enqueue(buffer.toString()) ;// add data to queue
 			}
-			//To catch the exception 
-			catch (IOException e)
-			{			
-				System.err.println("Please Give Valid File Details");
-			} 
-	    
-	    }
+		}
+		System.out.println("  company\t symbol \t  date & time of transaction\n");
+		queue.display();
+
 	}
-	
-	
-	
-	
-	
+
+}

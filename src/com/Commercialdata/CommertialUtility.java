@@ -16,7 +16,7 @@ public class CommertialUtility
 
 	public static void addAccount(String fileName)
 	{
-		fileName = "/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/Commercialdata/Customar.json/"
+		fileName = "/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/Commercialdata/Customer.json"
 					+ fileName;
 		try 
 		{

@@ -25,7 +25,7 @@ public class CommertialProgramMain
 			int n=scan.nextInt();
 			switch(n)
 			{
-				case 1:StockAccount newStock = new StockAccount("/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/Commercialdata/Customar.json");
+				case 1:StockAccount newStock = new StockAccount("/home/admin1/eclipse-workspace/ObjectOrintedProgram/src/com/Commercialdata/Customer.json");
 						break;
 
 				case 2:	double totalValue = stockAccRef.valueOf();
