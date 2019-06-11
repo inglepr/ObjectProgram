@@ -24,4 +24,3 @@ public class SocketClassAdapterImpl extends Socket implements SocketAdapter{
 	}
 
 }
-

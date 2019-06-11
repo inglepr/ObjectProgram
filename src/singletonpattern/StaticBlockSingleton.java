@@ -1,22 +1,17 @@
 package singletonpattern;
 
 public class StaticBlockSingleton {
-private static StaticBlockSingleton instance;
-private StaticBlockSingleton() {};
+private static  StaticBlockSingleton singleton=null;
+private StaticBlockSingleton() {}
 static {
 	try {
-		new StaticBlockSingleton();
+		singleton=new StaticBlockSingleton();
 	}
 	catch(Exception e) {
 		e.printStackTrace();
 	}
-	
-	}
-public StaticBlockSingleton getInstance() {
-	return instance;
-	
 }
-}//
-//public static int count; //static variable
-//public static void setMethod(int count){ 
-// this.count=count;}
+public StaticBlockSingleton getInstance() {
+	return singleton;
+}
+}

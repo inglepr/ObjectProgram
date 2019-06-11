@@ -1,13 +1,10 @@
 package singletonpattern;
 
 public class EagerInitializedSingleton {
-    
-	 private static final EagerInitializedSingleton instance = new EagerInitializedSingleton();
-	    
-	    //private constructor to avoid client applications to use constructor
-	    private EagerInitializedSingleton(){}
+private static final EagerInitializedSingleton instance=new EagerInitializedSingleton();
+private EagerInitializedSingleton() {}
+public static EagerInitializedSingleton getnstance() {
+	return instance;
+}	
+}
 
-	    public static EagerInitializedSingleton getInstance(){
-	        return instance;
-	    }
-	}

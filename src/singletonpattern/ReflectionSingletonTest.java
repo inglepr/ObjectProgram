@@ -6,7 +6,7 @@ public class ReflectionSingletonTest {
 
    public static void main(String[] args) {
 	   //Eager class public instance
-	   EagerInitializedSingleton instanceOne = EagerInitializedSingleton.getInstance(); 
+	   EagerInitializedSingleton instanceOne = EagerInitializedSingleton.getnstance(); 
 	 EagerInitializedSingleton obj1=null;//null instance by eager class 
 	 try {
 		 Constructor[] constructors = EagerInitializedSingleton.class.getDeclaredConstructors();
