@@ -5,7 +5,7 @@ package facadedesignpattern;
 public class Iphone implements MobileShop{
 
 	@Override
-	public void ModelNo() {
+	public void modelNo() {
 	System.out.println("iphone6");
 		
 	}

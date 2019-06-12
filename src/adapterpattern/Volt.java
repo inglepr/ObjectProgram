@@ -1,7 +1,8 @@
 package adapterpattern;
 
 public class Volt {
-private int volts;
+
+	private int volts;
 	
 	public Volt(int v){
 		this.volts=v;
@@ -14,4 +15,5 @@ private int volts;
 	public void setVolts(int volts) {
 		this.volts = volts;
 	}
+	
 }

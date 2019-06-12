@@ -5,7 +5,7 @@ package facadedesignpattern;
 public class Blackberry implements MobileShop{
 
 	@Override
-	public void ModelNo() {
+	public void modelNo() {
 		
 		System.out.println("Blackberry Z 10 ");
 			

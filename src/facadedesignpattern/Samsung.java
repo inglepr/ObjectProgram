@@ -5,7 +5,7 @@ package facadedesignpattern;
 public class Samsung implements MobileShop {
 
 	@Override
-	public void ModelNo() {
+	public void modelNo() {
 		System.out.println("Samsung galaxy tab 3 ");
 		
 	}

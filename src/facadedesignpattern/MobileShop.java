@@ -1,6 +1,6 @@
 package facadedesignpattern;
 
 public interface MobileShop {
-public void ModelNo();
+public void modelNo();
 public void price();
 }

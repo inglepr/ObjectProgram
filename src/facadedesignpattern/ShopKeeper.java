@@ -16,15 +16,15 @@ public class ShopKeeper  {
 	        blackberry=new Blackberry();  
 	    }  
 	    public void iphoneSale(){  
-	        iphone.ModelNo();  
+	        iphone.modelNo();  
 	        iphone.price();  
 	    }  
 	        public void samsungSale(){  
-	        samsung.ModelNo();  
+	        samsung.modelNo();  
 	        samsung.price();  
 	    }  
 	   public void blackberrySale(){  
-	    blackberry.ModelNo();  
+	    blackberry.modelNo();  
 	    blackberry.price();  
 	        }  
 	}  
